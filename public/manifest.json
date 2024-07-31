@@ -2,6 +2,8 @@
   "id": "/",
   "scope": "/",
   "name": "Clock",
+  "short_name": "Clock",
+  "description": "Clock with offline support",
   "display": "fullscreen",
   "start_url": "/",
   "theme_color": "#E1477E",
