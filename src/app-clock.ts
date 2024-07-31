@@ -3,12 +3,6 @@ import { customElement } from 'lit/decorators.js';
 
 import { ClockController } from './clock-controller.js';
 
-const timeFormatHour = new Intl.DateTimeFormat(undefined, {
-  hour: '2-digit',
-});
-const timeFormatMinute = new Intl.DateTimeFormat(undefined, {
-  minute: '2-digit',
-});
 const dateFormat = new Intl.DateTimeFormat(undefined, {
   weekday: 'long',
   day: 'numeric',
@@ -55,9 +49,9 @@ export class AppClock extends LitElement {
   ];
 
   render() {
-    const hour = timeFormatHour.format(this.clock.value);
+    const hour = zeroPrefix(this.clock.value.getHours());
     const separator = this.clock.value.getSeconds() % 2 == 0 ? ':' : ' ';
-    const mins = timeFormatMinute.format(this.clock.value);
+    const mins = zeroPrefix(this.clock.value.getMinutes());
     const date = dateFormat.format(this.clock.value);
     return html`
       <main>
@@ -72,5 +66,12 @@ export class AppClock extends LitElement {
       </main>
     `;
   }
+}
+
+function zeroPrefix(value: number) {
+  if (value >= 10) {
+    return value.toString();
+  }
+  return '0' + value.toString();
 }
 
