@@ -5,3 +5,6 @@ dev-dist
 build
 types
 .idea
+*.keystore
+generate_apk/app-release-*
+generate_apk/assetlinks.json

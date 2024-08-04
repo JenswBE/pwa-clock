@@ -1,0 +1,49 @@
+{
+  "packageId": "be.jensw.clock",
+  "host": "clock.jensw.be",
+  "name": "Clock",
+  "launcherName": "Clock",
+  "display": "fullscreen",
+  "themeColor": "#E1477E",
+  "themeColorDark": "#000000",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#E1477E",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://clock.jensw.be/assets/icons/512x512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "/app/signing.keystore",
+    "alias": "my-key-alias"
+  },
+  "appVersionName": "v1.0.0",
+  "appVersionCode": 6,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://clock.jensw.be/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://clock.jensw.be/",
+  "minSdkVersion": 19,
+  "orientation": "landscape",
+  "fingerprints": [
+    {
+      "value": "A2:A3:2E:8B:D4:09:61:3D:16:A8:C9:2C:FA:8E:67:23:FE:C4:B8:6D:81:DE:56:9F:A5:C2:C9:99:1E:15:C1:B4"
+    },
+    {
+      "value": "A2:A3:2E:8B:D4:09:61:3D:16:A8:C9:2C:FA:8E:67:23:FE:C4:B8:6D:81:DE:56:9F:A5:C2:C9:99:1E:15:C1:B4"
+    }
+  ],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "appVersion": "v1.0.0"
+}
