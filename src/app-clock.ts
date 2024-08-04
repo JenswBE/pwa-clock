@@ -43,7 +43,7 @@ export class AppClock extends LitElement {
 
       #date-container {
         flex: 3;
-        font-size: 60px;
+        font-size: 80px;
       }
     `,
   ];
