@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "typescript": "^5.4.4",
-    "vite": "^5.2.8",
+    "vite": "^6.0.0",
     "vite-plugin-pwa": "^0.21.0"
   },
   "prettier": {
