@@ -1,9 +1,12 @@
 # PWA clock with offline support
 
-Running locally:
+## Running locally with auto-regenerate
 
 ```bash
-npx @pwabuilder/cli start
+# Install from https://github.com/watchexec/watchexec
+watchexec ./generate.sh
+
+cd output && python3 -m http.server
 ```
 
 ## Generate APK
@@ -23,4 +26,3 @@ bubblewrap_container update
 bubblewrap_container build
 # Ensure assetlinks.json is up-to-date if signing key changes!
 ```
-

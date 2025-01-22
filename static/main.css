@@ -4,23 +4,8 @@
 */
 
 @font-face {
-  font-family: 'VT323';
-  src: url('./VT323-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'ChivoMono';
-  src: url('./ChivoMono-ExtraBold.ttf');
-}
-
-@font-face {
-  font-family: 'RubikMonoOne';
-  src: url('./RubikMonoOne-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'DejaVuSansMono';
-  src: url('./DejaVuSansMono.ttf');
+  font-family: "ChivoMono";
+  src: url("./ChivoMono-ExtraBold.ttf");
 }
 
 html,
@@ -48,3 +33,32 @@ body {
   }
 }
 
+main,
+div {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  margin: 0;
+  vertical-align: middle;
+}
+
+#time-container {
+  flex: 7;
+  font-size: 275px;
+  font-weight: black;
+  font-family: ChivoMono;
+}
+
+#date-container {
+  flex: 3;
+  font-size: 80px;
+}
