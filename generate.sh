@@ -1,13 +1,16 @@
 #!/bin/bash
+set -euo pipefail # http://redsymbol.net/articles/unofficial-bash-strict-mode/
 
-# Build client
+echo "Building client ..."
 GOARCH=wasm GOOS=js go build -o output/web/app.wasm
 
-# Build static website
+echo "Building static website ..."
 go run .
 
-# Copy static resources
-cp -r static/* output/web/
+echo "Copying static resources ..."
+cp -r static/. output/
 
-# Run post-processing
+echo "Running post-processing ..."
 go run ./postprocess
+
+echo "Generation done"
