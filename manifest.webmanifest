@@ -1,0 +1,50 @@
+{
+  "background_color": "#E1477E",
+  "categories": [
+    "utilities"
+  ],
+  "description": "Clock with offline support",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "/web/assets/icons/192x192.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "any",
+      "src": "https://raw.githubusercontent.com/maxence-charriere/go-app/master/docs/web/icon.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "sizes": "512x512",
+      "src": "/web/assets/icons/512x512.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "192x192",
+      "src": "/web/assets/icons/192x192.png",
+      "type": "image/png"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "name": "Clock",
+  "orientation": "landscape",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "scope": "/",
+  "screenshots": [
+    {
+      "sizes": "1617x1012",
+      "src": "assets/screenshots/screen.png",
+      "type": "image/png"
+    }
+  ],
+  "short_name": "Clock",
+  "shortcuts": [],
+  "start_url": "/",
+  "theme_color": "#E1477E"
+}

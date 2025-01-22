@@ -1,55 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="nl">
   <head>
-    <meta charset="utf-8" />
-    <title>pwa-clock</title>
-
-    <base href="/" />
-
-    <!-- This meta viewport ensures the webpage's dimensions change according to the device it's on. This is called Responsive Web Design.-->
-    <meta
-      name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
-    />
-    <meta name="description" content="This is a pwa-clock app" />
-    <meta name="theme-color" content="#181818" />
-
-    <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="pwa-clock" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-
-    <!-- This tag is used by the pwa-clock CLI to identify template projects. Don't remove if you are using the CLI. -->
-    <meta name="pwa-starter-template-identity" content="pwa-starter" />
-
-    <!-- Imports an icon to represent the document. -->
-    <link rel="icon" href="/assets/icons/24x24.png" type="image/png" />
-
-    <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
-    <link rel="manifest" href="manifest.json" />
-
-    <!-- dark mode CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.73/dist/themes/dark.css"
-      onload="document.documentElement.classList.add('sl-theme-dark');"
-    />
-
-    <script type="module" crossorigin src="/code/index-DctEHlXh.js"></script>
-    <link rel="stylesheet" crossorigin href="/code/index-BnpuekuE.css">
+    <meta charset="UTF-8">
+    <meta name="author" content>
+    <meta content="Clock with offline support" name="description">
+    <meta name="theme-color" content="#E1477E">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="og:url" content="https://">
+    <meta property="og:title" content="Clock">
+    <meta property="og:description" content="Clock with offline support">
+    <meta content="website" property="og:type">
+    <meta property="og:image" content="https://">
+    <title>Clock</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/maxence-charriere/go-app/master/docs/web/icon.svg">
+    <link rel="apple-touch-icon" href="/web/assets/icons/192x192.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link href="/app.css" type="text/css" rel="stylesheet">
+    <link href="/web/main.css" type="text/css" rel="stylesheet">
+    <script defer src="/wasm_exec.js"></script>
+    <script defer src="/app.js"></script>
   </head>
-
   <body>
-    <!-- Our app-index web component. This component is defined in src/pages/app-index.ts-->
-    <app-index></app-index>
-
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.onload = () => {
-          navigator.serviceWorker.register('/sw.js');
-        };
-      }
-    </script>
+    <div class="container">
+      <div id="time-container" class="container">
+        <p></p>
+      </div>
+      <div id="date-container" class="container">
+        <p></p>
+      </div>
+    </div>
+    <aside class="goapp-app-info" id="app-wasm-loader">
+      <img id="app-wasm-loader-icon" class="goapp-logo goapp-spin" alt="wasm loader icon" src="/web/assets/icons/192x192.png">
+      <p id="app-wasm-loader-label" class="goapp-label">0%</p>
+    </aside>
   </body>
 </html>
-

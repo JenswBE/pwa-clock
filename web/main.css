@@ -1,0 +1,64 @@
+/*
+  This file is used for all of your global styles and CSS variables.
+  Check here https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties for more info on using CSS variables.
+*/
+
+@font-face {
+  font-family: "ChivoMono";
+  src: url("./ChivoMono-ExtraBold.ttf");
+}
+
+html,
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #3e3836;
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html,
+  body {
+    background-color: #f5f5f5;
+    color: black;
+  }
+}
+
+main,
+div {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  margin: 0;
+  vertical-align: middle;
+}
+
+#time-container {
+  flex: 7;
+  font-size: 275px;
+  font-weight: black;
+  font-family: ChivoMono;
+}
+
+#date-container {
+  flex: 3;
+  font-size: 80px;
+}
