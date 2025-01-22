@@ -1,12 +1,12 @@
 // -----------------------------------------------------------------------------
 // PWA
 // -----------------------------------------------------------------------------
-const cacheName = "app-" + "f38db2c3b27a530fb0b7702504fc4cdaf92bf90b";
+const cacheName = "app-" + "667016c6d6ea30949eee7f60412e6173537e6244";
 const resourcesToCache = ["/web/main.css","/web/assets/icons/512x512.png","/web/assets/icons/192x192.png","/web/app.wasm","/wasm_exec.js","/manifest.webmanifest","/app.js","/app.css","/"];
 
 self.addEventListener("install", async (event) => {
   try {
-    console.log("installing app worker f38db2c3b27a530fb0b7702504fc4cdaf92bf90b");
+    console.log("installing app worker 667016c6d6ea30949eee7f60412e6173537e6244");
     await installWorker();
     await self.skipWaiting();
   } catch (error) {
@@ -23,7 +23,7 @@ self.addEventListener("activate", async (event) => {
   try {
     await deletePreviousCaches(); // Await cache cleanup
     await self.clients.claim(); // Ensure the service worker takes control of the clients
-    console.log("app worker f38db2c3b27a530fb0b7702504fc4cdaf92bf90b is activated");
+    console.log("app worker 667016c6d6ea30949eee7f60412e6173537e6244 is activated");
   } catch (error) {
     console.error("error during activation:", error);
   }
