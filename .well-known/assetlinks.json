@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "be.jensw.clock",
+      "sha256_cert_fingerprints": [
+        "A2:A3:2E:8B:D4:09:61:3D:16:A8:C9:2C:FA:8E:67:23:FE:C4:B8:6D:81:DE:56:9F:A5:C2:C9:99:1E:15:C1:B4"
+      ]
+    }
+  }
+]
+
