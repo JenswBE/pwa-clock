@@ -1,12 +1,12 @@
 // -----------------------------------------------------------------------------
 // PWA
 // -----------------------------------------------------------------------------
-const cacheName = "app-" + "f0d0eb9888d0b6cf51945ad3d9425cccd6dc5395";
+const cacheName = "app-" + "cc26010d616ce4141762abb4a25bbbe70a25dbfa";
 const resourcesToCache = ["/web/main.css","/web/assets/icons/512x512.png","/web/assets/icons/192x192.png","/web/app.wasm","/wasm_exec.js","/manifest.webmanifest","/app.js","/app.css","/"];
 
 self.addEventListener("install", async (event) => {
   try {
-    console.log("installing app worker f0d0eb9888d0b6cf51945ad3d9425cccd6dc5395");
+    console.log("installing app worker cc26010d616ce4141762abb4a25bbbe70a25dbfa");
     await installWorker();
     await self.skipWaiting();
   } catch (error) {
@@ -23,24 +23,26 @@ self.addEventListener("activate", async (event) => {
   try {
     await deletePreviousCaches(); // Await cache cleanup
     await self.clients.claim(); // Ensure the service worker takes control of the clients
-    console.log("app worker f0d0eb9888d0b6cf51945ad3d9425cccd6dc5395 is activated");
+    console.log("app worker cc26010d616ce4141762abb4a25bbbe70a25dbfa is activated");
   } catch (error) {
     console.error("error during activation:", error);
   }
 });
 
 async function deletePreviousCaches() {
-  keys = await caches.keys();
-  keys.forEach(async (key) => {
-    if (key != cacheName) {
-      try {
-        console.log("deleting", key, "cache");
-        await caches.delete(key);
-      } catch (err) {
-        console.error("deleting", key, "cache failed:", err);
+  const keys = await caches.keys();
+  await Promise.all(
+    keys.map(async (key) => {
+      if (key !== cacheName) {
+        try {
+          console.log("deleting", key, "cache");
+          await caches.delete(key);
+        } catch (err) {
+          console.error("deleting", key, "cache failed:", err);
+        }
       }
-    }
-  });
+    })
+  );
 }
 
 self.addEventListener("fetch", (event) => {
