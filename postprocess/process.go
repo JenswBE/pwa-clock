@@ -48,7 +48,7 @@ func processJSONFile(path string, process func(data map[string]any) error) error
 	slog.Info("Post-processing file", "file", fullPath)
 
 	// Read file content
-	content, err := os.ReadFile(fullPath)
+	content, err := os.ReadFile(fullPath) // #nosec G304 -- Paths are hardcoded strings in the code, not user input
 	if err != nil {
 		return fmt.Errorf("failed to read file %s: %w", fullPath, err)
 	}
